@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-
+// here we are creating a CUSTOM HOOK for our this project 
 function useCurrencyInfo(currency){
     const[data,setData ] = useState({})  //Defines a state variable data initialized as an empty object {}. This state will hold the fetched currency information.
 
@@ -21,13 +21,9 @@ function useCurrencyInfo(currency){
       console.log(data)  //console.log(data);: Logs the current state of data outside of the useEffect hook. This will log the updated state of data whenever it changes due to the effect running.
 
       return data  //return data;: Returns the data state. This allows components using useCurrencyInfo to access and use the fetched currency information.
-
 }
 
 export default useCurrencyInfo;
-
-
-
 
 // How It Works:
 // Initialization: When the useCurrencyInfo hook is called with a currency parameter, it initializes a state variable data using useState. Initially, data is an empty object {}.

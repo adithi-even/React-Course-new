@@ -46,7 +46,8 @@ function App() {
 
       {/* input */}
       <div className='flex shadow rounded-lg overflow-hidden mb-4'>
-        <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly ref={passwordRef} />  //this is the reference element we are taking refernce from and manipulating using useRef hook
+        <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly //this is the reference element we are taking refernce from and manipulating using useRef hook ref={passwordRef} 
+        />  
         <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>Copy</button>
       </div>
       <div className='flex text-sm gap-x-2'>
