@@ -10,9 +10,11 @@ function useCurrencyInfo(currency){
 
         fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies/${currency}.json`) //fetch function makes a GET request to the specified API endpoint 
 
-        .then((res)=>res.json()) //converts the HTTP response to JSON format.
+        .then((res)=>res.json()) //converts the HTTP response to JSON format.here 'res' means response //since here we are converting the response to json in the next line then the response will be already in the form of json i.e., 15 line the res is already in the form of json 
 
         .then((res)=>setData(res[currency])) //updates the data state with the fetched currency information (res[currency]). 
+        //so we need to hold that response in a variable since we cannot use the variable directly so we use useState and since data is the variable having the value of empty object and whenever we wanted to use the state variable we use its setData .Hence ,we stored the response we got from the line 13 in the setData method and we are accessing the key value [currency] from the object i.e., response (and we can also access the object not only from dot but also from the square brackets) 
+        //so what ever the value of currency in the fetch url it will be the key value of the response we get 
 
         console.log(data);  // It also logs the fetched data to the console for debugging purposes.
 
