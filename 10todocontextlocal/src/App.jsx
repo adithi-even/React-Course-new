@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   const [todos , setTodos] = useState([]) //here the todos is a array and has many values , and we have to find out which is that one todo whose id is matching the id so that we can update the value of todo  in updatedTodo the conndition which we wrote is the  [prevTodo.id === id ? todo: prevTodo ] in updatedTOdo
 
-  const addTodo = (todo) =>{
+  const addTodo = (todo) =>{ //this todo and 6th line todos are different : todos = its a state variable which stores all the todo items user have given . and todo :it is the where we get it from the "form" inside the return of jsx 
     setTodos((prev) =>[{id: Date.now(), ...todo}, ...prev]) //if we setTodos then all the previous value gets deleted and it will only have todo in the    
   }
 

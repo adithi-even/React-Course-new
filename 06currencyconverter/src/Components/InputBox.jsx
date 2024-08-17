@@ -6,7 +6,7 @@ function InputBox({ //these variables have the value which is given as input by 
   onAmountChange,
   onCurrencyChange,
   currencyOptions=[],// array coz of json data from API
-  selectCurrency = "usd",
+  selectCurrency = "usd",// this is the default value if the user didn't select any option then the default is usd,, after that we will link option and select tags
   amountDisable = false ,
   currencyDisable = false,  
   className = "",  //   this is the class for user to change if he a=has any css to change
