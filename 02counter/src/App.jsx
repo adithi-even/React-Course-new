@@ -15,6 +15,7 @@ function App() {
     //counter = counter + 1
     if (counter < 20){
       setCounter(counter + 1)
+      // setCounter((prevCounter)=>prevCounter+1) //here prevCounter is the last updated state/value of the counter.so by adding the prevCounter as a parameter tehn we can give the defn of the funvtion now if we give multiple lines of same counter +1 then the answer gonna change 
 
      }
 
