@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function TodoForm() {
+    const [todo ,setTodo]  = useState(" ") //this is an individual todo form and this is an addTodo
+
+    const {} = useTodo()
     
 
   return (
