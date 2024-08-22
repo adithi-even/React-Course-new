@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useTodo , useState } from 'react'
 
 function TodoForm() {
     const [todo ,setTodo]  = useState(" ") //this is an individual todo form and this is an addTodo
@@ -18,6 +18,6 @@ function TodoForm() {
           </button>
       </form>
   );
-}
+}   
 
 export default TodoForm;
