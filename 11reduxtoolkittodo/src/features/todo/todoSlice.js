@@ -1,4 +1,4 @@
-import {createSlice,nanoid} from '@reduxjs/toolkit'  //nanoid generates the unique id thats it 
+import {createSlice,nanoid} from '@reduxjs/toolkit'  //nanoid generates the unique id thats it is used to give id's to tthe individual todos
 
 const initialState = {
     todos:[{id:1, text: "Hello Wordl"}]
