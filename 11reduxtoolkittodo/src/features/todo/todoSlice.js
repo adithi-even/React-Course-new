@@ -32,3 +32,8 @@ export default todoSlice.reducer
 
 
 
+//In the context of Redux and Redux Toolkit, action.payload is a common way to pass data from an action to a reducer. Let’s break down what it means and how it's used.
+
+//What is action.payload?
+//action: In Redux, an action is an object that describes what happened. It usually has a type property that specifies the type of action (like 'ADD_TODO', 'REMOVE_TODO', etc.).
+//payload: The payload property of an action is where you store the data that you want to send to the reducer. This data is usually passed to the action creator when the action is dispatched.
