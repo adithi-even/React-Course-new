@@ -26,7 +26,7 @@ export const todoSlice = createSlice({ //so slice is a almost a big version of r
 
 export const {addTodo,removeTodo} = todoSlice.actions//we have to export this addTodo,removeTodo coz through this only we can update the state so this functionality we can use as individually  , so from this actions we can access addTodo,removeTodo functionalities,the reason we have exported the functionality(addTodo,removeTodo) is coz this we can use this in conponents
 
-//and now we are going to store 
+//and now we are going to store ..
 
 export default todoSlice.reducer
 
@@ -37,3 +37,9 @@ export default todoSlice.reducer
 //What is action.payload?
 //action: In Redux, an action is an object that describes what happened. It usually has a type property that specifies the type of action (like 'ADD_TODO', 'REMOVE_TODO', etc.).
 //payload: The payload property of an action is where you store the data that you want to send to the reducer. This data is usually passed to the action creator when the action is dispatched.
+
+if(brain !== empty){
+    keepCoding()
+}else{
+    drinkCoffee()
+}
