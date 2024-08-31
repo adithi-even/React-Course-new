@@ -5,11 +5,11 @@ import { addTodo } from '../features/todo/todoSlice'
 function AddTodo() {
 
     const [input, setInput] = useState('')
-    const dispatch = useDispatch()
+    const dispatch = useDispatch() //creating dispatch//here we are using the useDispatch 
     
     const addTodoHandler = (e) => {
       e.preventDefault() 
-      dispatch(addTodo(input)) //creating dispatch
+      dispatch(addTodo(input)) //creating dispatch//what does dispatch do? DISPATCH USES REDUCERS TO CHANGE VALUES(OR TO ADD VALUE) INSIDE THE STORE 
       setInput('')
     }
 

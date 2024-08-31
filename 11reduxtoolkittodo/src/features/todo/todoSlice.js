@@ -19,21 +19,26 @@ export const todoSlice = createSlice({ //so slice is a almost a big version of r
             state.todos.push(todo) //this line means the current state of the todo (for now the current state is initial state since there is no data given from the user) is appended to the todos array in the line 4 .//The line state.todos.push(todo); adds a new todo item to the existing list of todos in the Redux state, effectively updating the state by appending the new task to the end of the todos array.//
         } ,
         removeTodo : (state ,action) => {//this is also a property
-            state.todos = state.todos.filter((todos) =>todos.id !== action.payload)
+            state.todos = state.todos.filter((todos) =>todos.id !== action.payload) //action.payload is a common way to pass data from an action to a reducer.
         },
         // updateTodo : (state,action) => {
-        //     state.todos = 
+        //     state.todos = state.todos.map((todo)=>{
+        //         if(todo.id===action.payload.id ){
+        //         todo.text= action.payload.text
+        //     }})
         // }
+    
     }
 })
 
 export const {addTodo,removeTodo} = todoSlice.actions//we have to export this addTodo,removeTodo coz through this only we can update the state so this functionality we can use as individually  , so from this actions we can access addTodo,removeTodo functionalities,the reason we have exported the functionality(addTodo,removeTodo) is coz this we can use this in components
 //No, addTodo and removeTodo are not states. They are reducer functions or action handlers defined within the reducers object of the createSlice function.
-
+//from the actions we get the value they are addTodo,removeTodo
 
 //and now we are going to store ..
 
 export default todoSlice.reducer
+//here we are exporting the individual reducers and the list of reducers dual times coz the individual reducers will be used in components and the list of reducers i.e., the todoSlice.reducers will be given access to store then only the store will work properly
 
 
 
