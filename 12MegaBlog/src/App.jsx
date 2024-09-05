@@ -4,13 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  console.log(import.meta.env.VITE_APPWRITE);
+  
 
   return (
     <>
-    <h1>react with app write</h1>
+    <h1>react with appwrite</h1>
     </>
   )
 }
 
-export default App
+export default App  
+
+
+//url and endpoint are the same thing 
