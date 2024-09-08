@@ -15,7 +15,7 @@ export const TodoContext = createContext({
 
 })  // creating a new context
 
-export const useTodo = () =>{    //creating a function for useTodo method which will be later used .And yes, it is a custom hook similar to previous themeSwitcher's useTheme 
+export const useTodo = () =>{    //creating a function for useTodo method which will be later used .
     return useContext(TodoContext)
 }
 

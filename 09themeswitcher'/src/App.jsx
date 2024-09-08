@@ -20,12 +20,12 @@ function App() {
         setThemeMode("dark")
     }
 
-    //actual change in a theme //useEffect code doen't belong to context its just an another code in the file
+    //actual change in theme
 
     useEffect(()=>{
-        document.querySelector('html').classList.remove("light","dark")  //we are removing previously present mode since we don't know what it consists of so if any mode is present wheather it is light or dark remove it if both are present remove it 
-        document.querySelector('html').classList.add(themeMode)//we are adding what the user wants 
-    },[themeMode]) //whenever there is a change in theme mode then we want the useEffect to run again .hence the dependency
+        document.querySelector('html').classList.remove("light","dark")
+        document.querySelector('html').classList.add(themeMode)
+    },[themeMode])
 
 
   return (

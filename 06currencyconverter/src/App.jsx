@@ -37,13 +37,13 @@ function App() {
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                 <form
                     onSubmit={(e) => {
-                        e.preventDefault();  //we are useing prevent default coz when ever we submit a function it will go to any address or any URL since we dont want that to happen so we used prevent default and instead , whenever the user submits the form we want a method to get called i.e., convert () which is in the line 24
+                        e.preventDefault();
                         convert()
                        
                     }}
                 >
                     <div className="w-full mb-1">
-                        <InputBox //this is a component that we have created
+                        <InputBox
                             label="From"
                             amount={amount}
                             currencyOptions={options}

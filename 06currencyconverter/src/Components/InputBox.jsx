@@ -5,8 +5,8 @@ function InputBox({ //these variables have the value which is given as input by 
   amount,
   onAmountChange,
   onCurrencyChange,
-  currencyOptions=[],// array coz of json data from API
-  selectCurrency = "usd",// this is the default value if the user didn't select any option then the default is usd,, after that we will link option and select tags
+  currencyOptions=[],
+  selectCurrency = "usd",
   amountDisable = false ,
   currencyDisable = false,  
   className = "",  //   this is the class for user to change if he a=has any css to change
@@ -37,10 +37,10 @@ const amountInputId = useId ()  //from this we'll egt the unique id or unique va
                   onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)}     
               >
 
-                        {currencyOptions.map((currency)=>(   //here we are adding the loop for the option component below coz it has to take the value from the json api according to the user selection which is an array i.e., currencyOPtions  
+                  
+                        {currencyOptions.map((currency)=>(
 
-                            <option key={currency} //remember the key in loops of jsx if not itll effect performance 
-                            value={currency}>
+                            <option key={currency} value={currency}>
                             {currency}
                             </option>
                         ))}
