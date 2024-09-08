@@ -21,3 +21,22 @@ POINTS:
 
             Portability:
                 Using environment variables makes your application more portable because you don't need to hardcode environment-specific settings. The same codebase can run in different environments with different configurations
+
+
+*in the .env file*
+    so here we get the endpoint URL i.e., URL of the website and add here , 
+    project ID from the APPWRITE 
+    database ID from the APPWRITE 
+    collection ID from the APPWRITE 
+    bucket ID from the APPWRITE  and we also call it as storage ID
+
+*in the .env.sample* (which is only for the git, coz we don't share the details inside the .env file anywhere into the git or the production)
+
+# appwrite
+   *auth.js*
+        
+    
+
+
+   *config.js*
+
