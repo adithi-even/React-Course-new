@@ -14,18 +14,18 @@ export class Service{
         this.bucket = new Storage (this.client);
     }
 //here we are creating the post
-async createPost ({title, slug , content , featuredImage , status , userId}){
-    try {
-        return await this.databases.createDocument(
-            conf.appwriteDatabaseId,
-            conf.appwriteCollectionId, 
-            slug, 
-            {
-                title,
-                content, 
-                featuredImage, 
-                status, 
-                userId
+    async createPost ({title, slug , content , featuredImage , status , userId}){
+        try {
+            return await this.databases.createDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId, 
+                slug, 
+                {
+                    title,
+                    content, 
+                    featuredImage, 
+                    status, 
+                    userId
             }) //we are taking all these values from the appwrite docs and the video is number 21
         } catch (error) {
             console.log("Appwrite : error :createPost" , error);
