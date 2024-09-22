@@ -8,9 +8,9 @@ function useCurrencyInfo(currency){
       useEffect(()=>{
          //use effect is ,useEffect hook is used to perform side effects in functional components. It takes a function as its first argument, which will be executed after the component renders.
 
-        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies/${currency}.json`) //fetch function makes a GET request to the specified API endpoint 
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`) //fetch function makes a GET request to the specified API endpoint 
 
-        .then((res)=>res.json()) //converts the HTTP response to JSON format.
+        .then((res)=>res.json()) //converts the HTTP response to JSON format.//because most of all API's are in string format
 
         .then((res)=>setData(res[currency])) //updates the data state with the fetched currency information (res[currency]). 
 
