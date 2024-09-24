@@ -19,7 +19,7 @@ export class AuthService {
             const userAccount = await this.account.create(ID.unique(), email, password, name);
             if (userAccount) {
                 // call another method
-                return this.login({email, password});
+                return this.login({email, password});//if the user account is created then login the user or else return to creating the user account 
             } else {
                return  userAccount;
             }
@@ -30,7 +30,7 @@ export class AuthService {
 
     async login({email, password}) {
         try {
-            return await this.account.createEmailSession(email, password);
+            return await this.account.createEmailSession(email, password);//createEmailSession is the appwrites code snippet
         } catch (error) {
             throw error;
         }
@@ -38,7 +38,7 @@ export class AuthService {
 
     async getCurrentUser() {
         try {
-            return await this.account.get();
+            return await this.account.get(); //get is the appwrites code snippet
         } catch (error) {
             console.log("Appwrite serive :: getCurrentUser :: error", error);
         }
@@ -49,7 +49,7 @@ export class AuthService {
     async logout() {
 
         try {
-            await this.account.deleteSessions();
+            await this.account.deleteSessions(); //deleteSessions is the appwrites code snippet . deleteSession is for current browser logout deleteSessions is for logout from all the browser .
         } catch (error) {
             console.log("Appwrite serive :: logout :: error", error);
         }

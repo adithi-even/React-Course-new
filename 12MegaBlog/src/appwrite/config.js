@@ -54,7 +54,7 @@ export class Service{
         }
     }
     
-    async deletePost ({slug ,title, content , featuredImage , status }){
+    async deletePost ({slug }){
         try {
             await this.databases.deleteDocument(
                 conf.appwriteDatabaseId,
