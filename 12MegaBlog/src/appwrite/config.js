@@ -75,7 +75,7 @@ export class Service{
         }
     }
     
-    async getPost ({slug}){        //here we are getting any particular post from the use of slug 
+    async getPost ({slug}){        //here we are getting any particular post from the use of slug .
         try {
             return await this.databases.getDocument(
                 conf.appwriteDatabaseId,
