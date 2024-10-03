@@ -2,8 +2,8 @@ import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    status : false,
-    userData : null
+    status : false, //false means the user is not logged in yet
+    userData : null //if the user is not logged in then the data of the user is null which is equal to 0 
 }
 
 const authSlice = createSlice({
