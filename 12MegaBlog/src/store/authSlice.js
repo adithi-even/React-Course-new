@@ -2,7 +2,7 @@ import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    status : false, //false means the user is not logged in yet
+    status : false, //false means the user is not logged in yet, or user is not authenticated yet
     userData : null //if the user is not logged in then the data of the user is null which is equal to 0 
 }
 
@@ -11,7 +11,7 @@ const authSlice = createSlice({
     initialState ,
     reducers : {
         login : (state , action)=>{
-            state.status = true;
+            state.status = true;  //user status will be true;
             state.userData = action.payload.userData;
         },
         logout : (state )=>{
@@ -22,5 +22,6 @@ const authSlice = createSlice({
 })
 
 export const {login , logout} =  authSlice.actions // |||lr to todo redux . logout and login are actions .
+// and we are exporting this so that we can use this in other components
 
-export default authSlice.reducer
+export default authSlice.reducer 

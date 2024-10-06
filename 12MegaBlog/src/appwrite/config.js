@@ -1,6 +1,8 @@
 import conf from "../conf/conf";
 import { Client, ID ,Databases ,Storage ,Query } from "appwrite"; 
 
+//CONFIGURATION OF 
+
 export class Service{
     client = new Client ();
     databases;
@@ -54,7 +56,7 @@ export class Service{
         }
     }
     
-    async deletePost ({slug }){
+    async deletePost ({slug}){
         try {
             await this.databases.deleteDocument(
                 conf.appwriteDatabaseId,

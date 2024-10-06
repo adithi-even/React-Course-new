@@ -1,6 +1,7 @@
 import conf from '../conf/conf.js';
 import { Client, Account, ID } from "appwrite";
 
+//AUTHORIZATION
 
 export class AuthService {
     client = new Client();
@@ -19,7 +20,7 @@ export class AuthService {
             const userAccount = await this.account.create(ID.unique(), email, password, name);
             if (userAccount) {
                 // call another method
-                return this.login({email, password});//if the user account is created then login the user or else return to creating the user account 
+                return this.login({email, password});//if the user account is created then, login the user or else return to creating the user account 
             } else {
                return  userAccount;
             }
@@ -49,7 +50,7 @@ export class AuthService {
     async logout() {
 
         try {
-            await this.account.deleteSessions(); //deleteSessions is the appwrites code snippet . deleteSession is for current browser logout deleteSessions is for logout from all the browser .
+            await this.account.deleteSessions(); //deleteSessions is the appwrites code snippet . deleteSession is for current browser logout deleteSessions is for logout from all the browser .//there is a 's' in deletession's'
         } catch (error) {
             console.log("Appwrite serive :: logout :: error", error);
         }
