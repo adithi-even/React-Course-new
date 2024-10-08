@@ -11,7 +11,11 @@ function LogoutBtn() {
   const dispatch = useDispatch()
   const logoutHandler = () => {
     authService.logout().then(()=>{
-      dispatch(logout())
+      dispatch(logout()) //here we are using this coz, so that the imp. info should be updated in the store 
+    })
+    .catch((error)=>{
+      console.log("logout- error" , error);
+      
     })
     
   }
