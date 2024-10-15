@@ -86,7 +86,7 @@ function SignUp() {
             type='Submit'
             className='w-full'
             >
-              Sign UP
+              Create you Account 
             </Button>
 
           </div>
