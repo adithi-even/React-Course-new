@@ -1,7 +1,7 @@
 import React , {useState} from 'react'
 import {Link , useNavigate} from 'react-router-dom'
 import {login as authLogin } from '../store/authSlice'
-import {button , Input , Logo } from './Index'
+import {Button , Input , Logo } from './Index'
 import { useDispatch } from 'react-redux'
 import authService from '../appwrite/auth'
 import {useForm} from 'react-hook-form'
@@ -61,10 +61,24 @@ function Login() {
               validate: {
                 matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                 "Email address must be a valid address",
-              }//regEXR regular Expression
-              
+              }//regEXR regular Expression //validate is optional 
+
             }} ///to notify which input is this for ex:this particular input is the email input so we have named it email , for others we will name as password etc
             />
+            <Input 
+            label="Password:"
+            placeholder="Enter your Password"
+            type="password"
+            {...register("password"),{ //password is teh key 
+              required : true
+            }}
+            />
+            <Button
+            type='Submit'
+            className='w-full'
+            >
+              Sign In
+            </Button>
 
           </div>
           
