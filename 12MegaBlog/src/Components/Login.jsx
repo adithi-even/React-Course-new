@@ -56,7 +56,14 @@ function Login() {
             label="Email:"
             placeholder = "Enter your Email "
             type = "email"
-            {...register("email")} ///to notify which input is this for ex:this particular input is the email input so we have named it email , for others we will name as password etc
+            {...register("email"),{
+              required : true ,
+              validate: {
+                matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                "Email address must be a valid address",
+              }//regEXR regular Expression
+              
+            }} ///to notify which input is this for ex:this particular input is the email input so we have named it email , for others we will name as password etc
             />
 
           </div>
