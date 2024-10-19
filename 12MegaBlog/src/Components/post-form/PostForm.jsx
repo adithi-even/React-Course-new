@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-{Button }
-
+import {Button , Input, Select , RTE} from '../Index'
+import authService from '../../appwrite/config'
 
 function PostForm() {
   return (
