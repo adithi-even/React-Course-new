@@ -6,6 +6,9 @@ import LogoutBtn from "./Header/LogoutBtn";
 import Input from './Input'
 import Button from "./Button";
 import RTE from "./RTE";
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
+import Post from './Post'
 
 
 export {
@@ -16,5 +19,8 @@ export {
     LogoutBtn,
     Input,
     Button,
-    RTE
+    RTE,
+    Signup,
+    Login,
+    Post
 }
