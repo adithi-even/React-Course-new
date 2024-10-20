@@ -14,6 +14,7 @@ export default function RTE({name, control, label, defaultValue = ''}) {
         name={name || "content"}
         control={control}
         render={({field : {onChange}})=>{
+            //what ever wewant to render
             <Editor
         initialValue={defaultValue}
         init={{
@@ -46,9 +47,9 @@ export default function RTE({name, control, label, defaultValue = ''}) {
             "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
             content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
         }}
-        onEditorChange={onChange}
+        onEditorChange={onChange}  
         />
-        }} //if there is any changes inside this field then inform me along with render  
+        }} //if there is any changes inside this field then inform me along with render in the line 16 
         />
     </div>
 
@@ -57,3 +58,4 @@ export default function RTE({name, control, label, defaultValue = ''}) {
 }
 
 //when ever this RTE is called what are the input we are giving is
+//
