@@ -4,7 +4,7 @@ import authService from './appwrite/auth'
 import {login , logout } from './store/authSlice'
 
 import './App.css'
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 import Footer from './Components/Footer'
 
 function App() {
