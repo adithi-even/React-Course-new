@@ -4,9 +4,9 @@ import { Link , useNavigate } from 'react-router-dom' //useNavigate: A hook used
 import { useSelector } from 'react-redux'
 
 function Header() {
-  const authStatus = useSelector((state)=>state.auth.status)
+  const authStatus = useSelector((state) => state.auth.status)
   const navigate = useNavigate()
-
+  
   const navItems = [
     ////For example, Login and Signup are visible only if authStatus is false, meaning the user is not logged in. All Posts and Add Post are visible when authStatus is true, i.e., the user is authenticated.
     {  
