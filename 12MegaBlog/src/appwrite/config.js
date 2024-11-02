@@ -8,10 +8,10 @@ export class Service{
     databases;
     bucket;
 
-    constructor() {
+    constructor() {  //The constructor is called automatically when an instance of the Service class is created. It’s the place to set up the initial state of an object.
         this.client
-            .setEndpoint(conf.appwriteUrl)
-            .setEndpoint(conf.appwriteProjectId);
+            .setEndpoint(conf.appwriteUrl) // sets the API endpoint URL, and
+            .setEndpoint(conf.appwriteProjectId);  //associates the client with a specific Appwrite project.
         this.databases = new Databases (this.client);
         this.bucket = new Storage (this.client);
     }
@@ -21,7 +21,7 @@ export class Service{
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId, 
-                slug, 
+                slug,
                 {
                     title,
                     content, 
