@@ -53,12 +53,20 @@ function Header() {
           </div>
           <ul className='flex ml-auto'>
             {navItems.map((item) => 
-            item.active ? (//if the value of active is (authStatus) which is true then 1st condition will run or if the value of active is (!authStatus) which is false then it is gonna execute the 2nd condition which will be null as in the line 64
+            item.active ? //which means authStatus is true
+            
+            (//if the value of active is (authStatus) which is true then 1st condition will run or if the value of active is (!authStatus) which is false then it is gonna execute the 2nd condition which will be null as in the line 64
               //we have to add the keys where HTML element is repeating 
               <li key={item.name}>
                 <button
-                onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                onClick={() => 
+                  { 
+                    console.log("Button Clicked:", item.name);
+                    console.log("Navigating to:", item.slug);
+                    navigate(item.slug)
+                  }
+                }
+                className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
                 >{item.name}</button> 
               </li>
             ) : null

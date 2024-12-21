@@ -65,7 +65,7 @@ function Signup() {
                         {...register("email", {
                             required: true,
                             validate: {
-                                matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                                matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                                 "Email address must be a valid address",
                             }//regEXR regular Expression //validate is optional 
                         })} ///to notify which input is this for ex:this particular input is the email input so we have named it email , for others we will name as password etc
